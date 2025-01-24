@@ -1,0 +1,46 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/nvnieuwk/samplesheet-schema-bytesize/example/schema_input.json",
+    "title": "Samplesheet validation schema",
+    "description": "Schema for the samplesheet used in this pipeline",
+    "type": "array",
+    "uniqueEntries": ["sample"],
+    "items": {
+        "type": "object",
+        "properties": {
+            "sample": {
+                "anyOf": [
+                    { "type": "string" },
+                    { "type": "integer" }
+                ],
+                "pattern": "^[a-zA-Z1-9]+$",
+                "errorMessage": "Sample name must be a string or integer and can only contain the characters a-z, A-Z and 1-9"
+            },
+            "vcf": {
+                "type": "string",
+                "format": "file-path",
+                "pattern": "^\\S+\\.vcf\\.gz$",
+                "exists": true
+            },
+            "tbi": {
+                "type": "string",
+                "format": "file-path",
+                "pattern": "^\\S+\\.vcf\\.gz\\.tbi$",
+                "exists": true
+            },
+            "data_type": {
+                "type": "string",
+                "enum": ["DNA", "RNA"],
+                "default": "DNA"
+            },
+            "human": {
+                "type": "boolean",
+                "default": true
+            }
+        },
+        "required": ["sample"],
+        "dependentRequired": {
+            "tbi": ["vcf"]
+        }
+    }
+}

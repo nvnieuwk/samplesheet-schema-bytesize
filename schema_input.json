@@ -1,0 +1,13 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/nvnieuwk/samplesheet-schema-bytesize/schema_input.json",
+    "title": "Samplesheet validation schema",
+    "description": "Schema for the samplesheet used in this pipeline",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            
+        }
+    }
+}

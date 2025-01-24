@@ -1,0 +1,6 @@
+sample,vcf,tbi,data_type,human
+sample1,sample1.vcf.gz,sample1.vcf.gz.tbi,DNNA,
+sample 2,,sample2.vcf.gz.tbi,RNA,negative
+3,sample3.vccf.gz,,,True
+,vcf_dir/,,,false
+sample1,,,,
