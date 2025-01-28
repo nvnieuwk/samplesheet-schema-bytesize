@@ -1,5 +1,5 @@
 sample,vcf,tbi,data_type,human
-sample1,sample1.vcf.gz,sample1.vcf.gz.tbi,DNA,
-sample2,sample2.vcf.gz,sample2.vcf.gz.tbi,RNA,
-3,sample3.vcf.gz,,,True
-sample4,sample4.vcf.gz,,,false
+sample1,data/sample1.vcf.gz,data/sample1.vcf.gz.tbi,DNA,
+sample2,data/sample2.vcf.gz,data/sample2.vcf.gz.tbi,RNA,
+3,data/sample3.vcf.gz,,,True
+sample4,data/sample4.vcf.gz,,,false
